@@ -1,0 +1,173 @@
+<div class="bckGray" id="navBar">
+	<div class="contentWidth" id="navBarContent">
+		<img src="../assets/images/big_buddha.png" onmouseover="this.src ='../assets/images/big_buddha_selected.png'"
+			onmouseout="this.src ='../assets/images/big_buddha.png'" id="buddhaLogo" class="pointer">
+
+		<div>
+			<button mat-icon-button class="d-md-none white toSelect pointer" (click)="menuEnabled = !menuEnabled">
+				<mat-icon>menu</mat-icon>
+			</button>
+		</div>
+		<div id="options" class="d-none d-md-flex">
+			<span class="white toSelect pointer">About</span>
+			<span class="white toSelect pointer">Progetti</span>
+			<span class="white toSelect pointer">Contatti</span>
+		</div>
+	</div>
+</div>
+<div class="bckGray" id="optionsBar" *ngIf="menuEnabled">
+	<span class="white toSelect pointer">About</span>
+	<span class="white toSelect pointer">Projects</span>
+	<span class="white toSelect pointer">Contacts</span>
+</div>
+
+<div (click)="menuEnabled = false" class="bckBeige">
+
+	<div class="containerPic">
+
+		<div id="mainTitle">
+			The Art Of Making
+			<div id="spinOff" class="italic">
+				Andrea Della Maggiora
+			</div>
+		</div>
+
+
+		<div class="bird-container bird-container--one">
+			<div class="bird bird--one"></div>
+		</div>
+
+		<div class="bird-container bird-container--two">
+			<div class="bird bird--two"></div>
+		</div>
+
+		<div class="bird-container bird-container--three">
+			<div class="bird bird--three"></div>
+		</div>
+
+		<div class="bird-container bird-container--four">
+			<div class="bird bird--four"></div>
+		</div>
+
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="paragraphTitle col-md-6 d-flex">
+				<h2> The Art Of Making </h2>
+			</div>
+			<div class="paragraphTitle col-md-6">
+				<h3 class="italic">
+					"Lo zen risiede nel circuito di un calcolatore allo stesso modo in cui alberga sulla cima delle
+					montagne"
+				</h3>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-9">
+				<p>The Art Of Making è un'etichetta che ho creato condividere con le altre persone i miei
+					progetti, accoumunati
+					tutti dalla grande passione che ho per l'elettronica, la musica e l'informatica.</p>
+				<p>
+					Questo nome non ha il solo scopo di condividere semplici progetti ma bensì la più grande
+					ambizione di
+					trasmettere un sentimento molto più ampio nel quale credo profondamente:
+					cerdere e tenere a ciò che si fa.
+				</p>
+				<p>
+					L'arte del fare, del produrre, del pensare è per me un motore che spinge nella direzione della
+					Qualità.
+					Una Qualità che si vede con la coda dell'occhio, osservabile nelle piccole cose, nei dettagli dei
+					miei progetti e,
+					in generale, in tutti quei particolari che
+					non si vedono ma si percepiscono; Qualità che parte dallo spirito, passa dall'estro creativo
+					e
+					sfocia in una manualità artistica.
+				</p>
+			</div>
+			<div class="col-md-3" id="socialDiv">
+				<input type="image" src="../assets/images/facebook_logo.png" class="socialButtons" />
+				<input type="image" src="../assets/images/instagram_logo.png" class="socialButtons" />
+			</div>
+		</div>
+
+
+		<h2 class="paragraphTitle"> Progetti </h2>
+
+		<div class="row">
+			<div class="col-md-9 d-flex justify-content-center justify-content-md-between">
+				<img src="../assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- foto principale progetto -->
+			</div>
+			<div class="col-md-3 projectTitle">
+				<h3>Flashing Buddha </h3>
+			</div>
+		</div>
+
+		<p></p>
+		<p> Questo bizzarro oggetto è un computer a tutti gli effetti, creato soprattutto a scopo coreografico
+			per i concerti che faccio con la mia band.
+			Questa "mascotte" viene spesso posizionata in primo piano sul palco per creare un piacevole gioco di luci
+			al ritmo scandito dalla successione di Fibonacci.
+			Infatti, sia striscia di led all'interno del cassone, sia i led che illuminano il buddha "sfarfallano"
+			in rapida successione ON / OFF seguendo il ritmo della cosiddetta "successione aurea". </p>
+
+		<p> In primo piano è stata impiantata una matrice di led 4 x 32 che mostra una frequenza di 432 Hz,
+			anch'essa chiamata frequenza aurea, e rappresenta la frequenza di riferimento
+			della nota LA per l'accordatura di tutti i nostri strumenti musciali.
+		</p>
+
+		<div class="row">
+			<div class="col-md-6 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
+				<img src="../assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+			<div class="col-md-6 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
+				<img src="../assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+			<div class="col-md-12 col-lg-4 d-flex justify-content-center d-lg-block marginBottomPicture">
+				<img src="../assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+		</div>
+
+
+		<p>
+			Sul lato destro sono posizionati 3 led - rosso - giallo - verde per dare ulteriori colori alla struttura
+			e sopra, appena dietro al buddha, è stato inserito un modulo per il pilotaggio (all'
+			occorrenza) di 2 lamapade luminose per l'illuminazione del palco.
+			Anche il modulo per le lampade segue la successione di Fibonacci per
+			la propria accensione e spegnimento.
+		</p>
+		<p>
+			Infine, l'uscita video del computer è impostata in modo da eseguire un file batch in loop, producendo il
+			classico effetto "Matrix" con le scritte verdi su sfondo nero.
+		</p>
+
+		<div class="row d-flex">
+			<div class="col-md-6 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
+				<img src="../assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+			<div class="col-md-6 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
+				<img src="../assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+			<div class="col-md-12 col-lg-4 d-flex justify-content-center d-lg-block marginBottomPicture">
+				<img src="../assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+		</div>
+
+
+
+
+
+
+	</div>
+	<footer class="page-footer bckGray white">myFooter</footer>
+
+
+</div>

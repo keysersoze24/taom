@@ -1,0 +1,70 @@
+#navBar{
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navBarContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+#buddhaLogo{
+    max-width: 50px;
+}
+#mainTitle{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px; 
+    color: black;
+    font-size: 4rem;
+    letter-spacing: -3px;
+    text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
+    position: relative;
+    z-index: 3;
+}
+#optionsBar{
+    height: auto;
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#optionsBar :first-child {
+    margin-block-start: 25px;
+}
+#optionsBar >* {
+    margin-block-end: 25px;
+    font-size: 37px;
+}
+#options{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+}
+#pageContent{
+    margin: auto;
+}
+
+#spinOff {
+    font-size: 1.5rem;
+    letter-spacing: 0.7px;
+}
+#socialDiv {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
