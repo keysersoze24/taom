@@ -8,19 +8,29 @@
 	font-family: fish_chips;
 	src: url(./assets/fonts/fish_chips.ttf) format("opentype");
 }
-/*--------------------------------------- breakpoints ---------------------------------------------*/
-// IPad portrait
-@media screen and (min-width: 768px) {
-	
+/*----------------------------------------- colori ------------------------------------------------*/
+:root {
+	--color1: #212121;
+	--color2: beige;
+	--color3: #fafafa;;
+	--color4: #E5E1B9; 
 }
-// IPad landscape
-@media screen and (min-width: 992px) {
+.bckGray {
+	background-color: var(--color1);
+}
+.bckBeige {
+	background-color: var(--color2);
+}
+.bckWhite {
+	background-color: var(--color3);
+}
+.white {
+	color: var(--color3);
+}
+.lghGreen{
+	color: var(--color4);
+}
 
-}
-// desktop
-@media screen and (min-width: 1200px) {
-
-}
 
 /*-------------------------------------- elementi generali ----------------------------------------*/
 html {
@@ -55,7 +65,7 @@ h2 {
 }
 h3 {
 	font-size: 1.2rem;
-	font-weight: 400;
+	font-weight: 700;
 }
 p {
 	font-size: 1rem;
@@ -83,6 +93,9 @@ p {
 }
 .marginBottomPicture {
 	margin-bottom: 10px;
+}  
+.projectHeader {
+	margin-top: 120px;
 }
 /*---------------------------------------- pulsanti -----------------------------------------------*/
 .socialButtons {
@@ -93,22 +106,44 @@ p {
 	opacity: 0.7; 
 }
 
-/*----------------------------------------- colori ------------------------------------------------*/
-.bckGray {
-	background-color: #212121;
-}
-.bckBeige {
-	background-color: beige;
-}
-.bckWhite {
-	background-color: #fafafa;
-}
-.white {
-	color: #fafafa;
-}
-.lghGreen{
-	color: #E5E1B9;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*------------------------------------ animazioni uccellini ---------------------------------------*/
 *,
 *::before,
