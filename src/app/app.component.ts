@@ -7,8 +7,10 @@ import { Component, OnInit, HostListener } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   /*----- identificatori -----*/
   title = 'The Art Of Making';  
+  menuEnabled: boolean;
 }
 
