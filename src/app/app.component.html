@@ -9,22 +9,22 @@
 			</button>
 		</div>
 		<div id="options" class="d-none d-md-flex">
-			<span class="white toSelect pointer">About</span>
-			<span class="white toSelect pointer">Progetti</span>
+			<span class="white toSelect pointer" (click)="scrollToElement(presentation)">About</span>
+			<span class="white toSelect pointer" (click)="scrollToElement(projects)">Progetti</span>
 			<span class="white toSelect pointer">Contatti</span>
 		</div>
 	</div>
+	<div class="bckGray" id="optionsBar" *ngIf="menuEnabled">
+		<span class="white toSelect pointer">About</span>
+		<span class="white toSelect pointer">Projects</span>
+		<span class="white toSelect pointer">Contacts</span>
+	</div>
 </div>
-<div class="bckGray" id="optionsBar" *ngIf="menuEnabled">
-	<span class="white toSelect pointer">About</span>
-	<span class="white toSelect pointer">Projects</span>
-	<span class="white toSelect pointer">Contacts</span>
-</div>
+
 
 <div (click)="menuEnabled = false" class="bckBeige">
 
 	<div class="containerPic">
-
 		<div id="mainTitle">
 			The Art Of Making
 			<div id="spinOff" class="italic">
@@ -48,11 +48,10 @@
 		<div class="bird-container bird-container--four">
 			<div class="bird bird--four"></div>
 		</div>
-
 	</div>
 
 	<div class="container">
-		<div class="row">
+		<div class="row" #presentation>
 			<div class="paragraphTitle col-md-6 d-flex">
 				<h2> The Art Of Making </h2>
 			</div>
@@ -63,6 +62,7 @@
 				</h3>
 			</div>
 		</div>
+
 
 		<div class="row">
 			<div class="col-md-9">
@@ -111,7 +111,7 @@
 		</div>
 
 		<p></p>
-		<p> Questo bizzarro oggetto è un computer a tutti creato soprattutto a scopo coreografico
+		<p> Questo bizzarro oggetto è un computer creato soprattutto a scopo coreografico
 			per i concerti che faccio con la mia band.
 			Questa "mascotte" viene spesso posizionata in primo piano sul palco per creare un piacevole gioco di luci
 			al ritmo scandito dalla successione di Fibonacci.
@@ -241,7 +241,7 @@
 
 
 		<!--//////////// REPROCLOCK //////////////-->
-		<div class="row projectHeader">
+		<div class="row projectHeader" #projects>
 			<div class="col-md-9 d-flex justify-content-center justify-content-md-between">
 				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
 				<!-- foto principale progetto -->
@@ -316,10 +316,45 @@
 			</div>
 		</div>
 
+		<!--//////////////// WEATHER STATION //////////////////-->
+		<div class="row projectHeader">
+			<div class="col-md-9 d-flex justify-content-center justify-content-md-between">
+				<img src="assets/images/weather-station/Ipad-app.png" style="height: 300px; width: 300px;">
+				<!-- foto principale progetto -->
+			</div>
+			<div class="col-md-3 projectTitle">
+				<h3>Weather station</h3>
+			</div>
+		</div>
+
+		<p></p>
+		<p> Applicazione pensata per la visualizzazione in tempo reale delle condizioni meteo sulla quale vengono
+			utilizzate delle API pubbliche
+			che chiamo attraverso un servizio web.
+		</p>
+
+		<p>
+			L'applicazione è pensata da essere utilizzata in modo embedded su uno schermo di medie dimensioni (per
+			agevolare l'installazione su parete),
+			ad uso specifico per la visualizzazione dei dati metereologici locali.
+		</p>
+		<p>
+			Realizzato con Angular 8, è possibile trovare il codice sorgente a questo indirizzo:
+			<a
+				href="https://github.com/AndreaDellaMaggiora/weather-station">https://github.com/AndreaDellaMaggiora/weather-station</a>
+		</p>
+
+		<div class="row">
+			<div class="col-md-12 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
+				<img src="assets/images/weather-station/wall-home-Ipad.png"
+					style="height: 300px; margin-left: 5px; margin-right: 5px;">
+			</div>
+		</div>
+
 		<!--//////////////// RACING TIMER //////////////////-->
 		<div class="row projectHeader">
 			<div class="col-md-9 d-flex justify-content-center justify-content-md-between">
-				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<img src="assets/images/weather-station/Ipad-app.png" style="height: 300px; width: 300px;">
 				<!-- foto principale progetto -->
 			</div>
 			<div class="col-md-3 projectTitle">
@@ -338,7 +373,8 @@
 			modo:
 			<li>
 				INTERMEDI<br>
-				Dopo aver avviato il cronometro con lo START, questo pulsante prende i tempi intermedi della gara e alla pressione
+				Dopo aver avviato il cronometro con lo START, questo pulsante prende i tempi intermedi della gara e alla
+				pressione
 				mostra per 3 secondi il parziale appena preso, mentre in background il tempo continua a scorrere.
 			</li>
 			<li>
@@ -355,19 +391,12 @@
 		</p>
 
 		<div class="row">
-			<div class="col-md-6 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
-				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
-				<!-- matrice e interno con arduino  -->
-			</div>
-			<div class="col-md-6 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
-				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
-				<!-- matrice e interno con arduino  -->
-			</div>
-			<div class="col-md-12 col-lg-4 d-flex justify-content-center d-lg-block marginBottomPicture">
-				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
-				<!-- matrice e interno con arduino  -->
+			<div class="col-md-12 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
+				<img src="assets/images/weather-station/wall-home-Ipad.png"
+					style="height: 300px; margin-left: 5px; margin-right: 5px;">
 			</div>
 		</div>
+
 
 	</div>
 	<footer class="page-footer bckGray white">myFooter</footer>
