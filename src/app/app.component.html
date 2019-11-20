@@ -87,15 +87,19 @@
 				</p>
 			</div>
 			<div class="col-md-3" id="socialDiv">
-				<input type="image" src="assets/images/facebook_logo.png" class="socialButtons" />
-				<input type="image" src="assets/images/instagram_logo.png" class="socialButtons" />
+				<input type="image" src="assets/images/facebook-logo.png" class="socialButtons"
+					(click)="socialNavigation('facebook')" matTooltip="Facebook" />
+				<input type="image" src="assets/images/linkedin-logo.png" class="socialButtons"
+					(click)="socialNavigation('linkedin')" matTooltip="Linkedin" />
+				<input type="image" src="assets/images/github-logo.png" class="socialButtons"
+					(click)="socialNavigation('github')" matTooltip="Github" />
 			</div>
 		</div>
 
 
 		<h2 class="paragraphTitle"> Progetti </h2>
 
-		<!--////////// Flashing Buddha //////////-->
+		<!--//////////// FLASHING BUDDHA ////////////-->
 		<div class="row">
 			<div class="col-md-9 d-flex justify-content-center justify-content-md-between">
 				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
@@ -162,7 +166,7 @@
 			</div>
 		</div>
 
-		<!--////////// Parrot Stadium //////////-->
+		<!--//////////// PARROT STADIUM //////////////-->
 		<div class="row projectHeader">
 			<div class="col-md-9 d-flex justify-content-center justify-content-md-between">
 				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
@@ -174,13 +178,21 @@
 		</div>
 
 		<p></p>
-		<p> Modello di uno stadio calcio realizzato con solo materiale di ferramenta (eccetto il circuito per l'illuminazione),
-			la struttura principale è realizzata con classici stuzzicadenti e spiedi, i listelli di balsa servono da divisori tra il primo e il secondo anello
-		e come copertura dell'intero stadio. Per il fissaggio ho usato una colla a presa rapida per alcuni punti "strategici" di fissaggio e la colla vinilica per tutto il resto.  </p>
+		<p> Modello di uno stadio calcio realizzato con solo materiale di ferramenta (eccetto il circuito per
+			l'illuminazione),
+			la struttura principale è realizzata con classici stuzzicadenti e spiedi, i listelli di balsa servono da
+			divisori tra il primo e il secondo anello
+			e come copertura dell'intero stadio. Il manto erboso è composto da un tappetino in erba sintetica e per il
+			fissaggio di tutti i componenti
+			ho utilizzato una colla a presa rapida per alcuni punti "strategici" di fissaggio e la colla vinilica per
+			tutto il resto. </p>
 
-		<p> 
-			Lo stadio è illuminato internamente da 2 strisce di led (una tra il primo e il secondo anello e l'altra appena sotto la copertura del secondo anello)
-			entrambe alimentate elettricamente da cavi passanti dentro due tubi di alluminio e piccoli giunti di rame per la curvatura a 90°.
+		<p>
+			Lo stadio è illuminato internamente da 2 strisce di led (una tra il primo e il secondo anello e l'altra
+			appena sotto la copertura del secondo anello)
+			entrambe alimentate da cavi passanti dentro due tubi di alluminio e piccoli giunti di rame e esternamente da
+			6 diodi led gialli incassati nella tavola
+			di abete che forma la base.
 		</p>
 
 		<div class="row">
@@ -197,18 +209,19 @@
 				<!-- matrice e interno con arduino  -->
 			</div>
 		</div>
-
-
 		<p>
-			Sul lato destro sono posizionati 3 led - rosso - giallo - verde per dare ulteriori colori alla struttura
-			e sopra, appena dietro al buddha, è stato inserito un modulo per il pilotaggio (all'
-			occorrenza) di 2 lamapade luminose per l'illuminazione del palco.
-			Anche il modulo per le lampade segue la successione di Fibonacci per
-			la propria accensione e spegnimento.
+			L'impianto di illuminazione è pilotato da 1 interruttore per l'accensione generale e 2 tasti normalmente
+			aperti - uno
+			per la gestione delle strisce di led (possibilità di accensione separata di ogni striscia di led) e l'altro
+			per l'accensione/spegnimento
+			dei led esterni (se tenuto premuto attiva la modalità di rotazione dove i led iniziano a lampeggiare con
+			moto ortatorio attorno alla struttura).
 		</p>
 		<p>
-			Infine, l'uscita video del computer è impostata in modo da eseguire un file batch in loop, producendo il
-			classico effetto "Matrix" con le scritte verdi su sfondo nero.
+			All'accensione del tasto generale viene eseguito un piccolo gioco di luci come presentazione dello stadio.
+			Tutto questo è pilotato grazie a un microcontrollore Atmel su board Arduino Nano e al codice C++ da me
+			scritto che è possibile trovare a
+			questo indirizzo !link! sul mio profilo Linkedin.
 		</p>
 
 		<div class="row d-flex">
@@ -227,7 +240,134 @@
 		</div>
 
 
+		<!--//////////// REPROCLOCK //////////////-->
+		<div class="row projectHeader">
+			<div class="col-md-9 d-flex justify-content-center justify-content-md-between">
+				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- foto principale progetto -->
+			</div>
+			<div class="col-md-3 projectTitle">
+				<h3>Reptoclock</h3>
+			</div>
+		</div>
 
+		<p></p>
+		<p> Centralina per la gestione di luci solari e lunari dentro rettiliere / teche, configurabile da
+			un'applicazione scritta in html / javascript / css
+			(codice sorgente disponibile qui !link all'applicazione!) permettendo all'utilizzatore di riprodurre un
+			habitat estremamente realistico con una semplice temporizzazione
+			dell'impianto luminoso.
+		</p>
+
+		<p>
+			All'accensione della centralina viene visualizzato sullo schermo OLED un indirizzo IP e rappresenta
+			l'inidirizzo dell'applicazione
+			nella propria rete locale (LAN).
+			Infatti, inserendo l'indirizzo ip all'interno di un browser web di un dispositivo connesso alla stessa rete
+			locale, è possibile visualizzare l'applicazione
+			per l'inserimento degli orari di alba e tramonto.
+		</p>
+
+		<div class="row">
+			<div class="col-md-6 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
+				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+			<div class="col-md-6 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
+				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+			<div class="col-md-12 col-lg-4 d-flex justify-content-center d-lg-block marginBottomPicture">
+				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+		</div>
+		<p>
+			Dopo l'inserimento gli orari vengono impostati nella centralina e appaiono anch'essi sul display oled per
+			darne un'evidenza anche dopo la chiusura dell'applicazione.
+			La centralina, inoltre, non ha bisogno di avere una propria configurazione dell'ora auttale in quanto va a
+			leggere costantemente
+			l'orario attuale dal server della propria LAN.
+		</p>
+		<p>
+			A questo punto la centralina è configurata e all'orario di alba verrà emesso un segnale dimmerato sulla
+			presa
+			di corrente della lampada solare e su quella del riscaldatore. Questo crea un bellissimo effetto di alba,
+			con un dolce e graduale aumento della luce fino a raggiungere
+			la massima intensità luminosa e calore per poi, infine, ridiscendere a poco a poco in un bellissimo
+			crepuscolo fino spegnersi completamente nella notte.
+			Il ciclo del sole è finito e viene quindi interrotto il segnale sia sulla presa solare che quella del
+			riscaldatore per abilitare
+			il segnale su presa lunare permettendo quindi l'accensione della luce notturna.
+		</p>
+
+		<div class="row d-flex">
+			<div class="col-md-6 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
+				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+			<div class="col-md-6 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
+				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+			<div class="col-md-12 col-lg-4 d-flex justify-content-center d-lg-block marginBottomPicture">
+				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+		</div>
+
+		<!--//////////////// RACING TIMER //////////////////-->
+		<div class="row projectHeader">
+			<div class="col-md-9 d-flex justify-content-center justify-content-md-between">
+				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- foto principale progetto -->
+			</div>
+			<div class="col-md-3 projectTitle">
+				<h3>Racing Timer</h3>
+			</div>
+		</div>
+
+		<p></p>
+		<p> Un cronometro per auto da corsa, dove il tempo viene visualizzato su 4 display a 7 segmenti. Anche se molto
+			preciso
+			il minimo valore in output sul primo display (da destra) è il secondo.
+		</p>
+
+		<p>
+			Per mantenere un semplice e intuitivo utilizzo ho utilizzato solamente 2 tasti che funzionano nel seguente
+			modo:
+			<li>
+				INTERMEDI<br>
+				Dopo aver avviato il cronometro con lo START, questo pulsante prende i tempi intermedi della gara e alla pressione
+				mostra per 3 secondi il parziale appena preso, mentre in background il tempo continua a scorrere.
+			</li>
+			<li>
+				START / STOP <br>
+				Se premuto la prima volta (dopo l'accensione) aziona il cronometro e inizia a visualizzare
+				il tempo che scorre sul display mentre al secondo push viene stoppato il tempo e sul
+				display vengono automaticamente
+				mostrati in successione tutti gli intermedi presi durante la gara.
+			</li>
+		</p>
+		<p>
+			Il progetto è stato realizzato con un microcontrollore ATmega328 montato sulla scheda Arduino UNO,
+			il codice sorgente è disponibile a questo indirizzo: xxx
+		</p>
+
+		<div class="row">
+			<div class="col-md-6 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
+				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+			<div class="col-md-6 col-lg-4 d-flex justify-content-center d-md-block marginBottomPicture">
+				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+			<div class="col-md-12 col-lg-4 d-flex justify-content-center d-lg-block marginBottomPicture">
+				<img src="assets/images/flashing-buddha/flashing-buddha1.png" style="height: 300px; width: 300px;">
+				<!-- matrice e interno con arduino  -->
+			</div>
+		</div>
 
 	</div>
 	<footer class="page-footer bckGray white">myFooter</footer>
