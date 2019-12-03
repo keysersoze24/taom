@@ -31,7 +31,7 @@ export class AppComponent {
         this.document.location.href = "https://www.linkedin.com/in/andrea-della-maggiora-258087198/";
         break;
       case 'github':
-        this.document.location.href = "https://github.com/AndreaDellaMaggiora";
+        this.document.location.href = "https://github.com/keysersoze24";
       default:
         break;
     }
