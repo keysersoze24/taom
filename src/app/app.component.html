@@ -1,28 +1,12 @@
 <div class="bckGray" id="navBar">
-	<div class="contentWidth" id="navBarContent">
-		<img src="assets/images/big_buddha.png" onmouseover="this.src ='assets/images/big_buddha_selected.png'"
-			onmouseout="this.src ='assets/images/big_buddha.png'" id="buddhaLogo" class="pointer">
-
-		<div>
-			<button mat-icon-button class="d-md-none white toSelect pointer" (click)="menuEnabled = !menuEnabled">
-				<mat-icon>menu</mat-icon>
-			</button>
-		</div>
-		<div id="options" class="d-none d-md-flex">
-			<span class="white toSelect pointer" (click)="scrollToElement(presentation)">About</span>
-			<span class="white toSelect pointer" (click)="scrollToElement(projects)">Progetti</span>
-			<span class="white toSelect pointer">Contatti</span>
-		</div>
-	</div>
-	<div class="bckGray" id="optionsBar" *ngIf="menuEnabled">
-		<span class="white toSelect pointer">About</span>
-		<span class="white toSelect pointer">Projects</span>
-		<span class="white toSelect pointer">Contacts</span>
-	</div>
+	<img src="assets/images/big_buddha.png" (click)="scrollToTop()" class="pointer flash " id="buddhaLogo">
+	<a href="mailto:'adm91@email.com'">
+		<img src="assets/images/mail.png" class="pointer flash" id="mailLogo" (click)=sendEmail()>
+	</a>
 </div>
 
 
-<div (click)="menuEnabled = false" class="bckBeige">
+<div class="bckBeige">
 
 	<div class="containerPic">
 		<div id="mainTitle">
@@ -50,8 +34,9 @@
 		</div>
 	</div>
 
+	<div #presentation></div>
 	<div class="container">
-		<div class="row" #presentation>
+		<div class="row">
 			<div class="paragraphTitle col-md-6 d-flex">
 				<h2> The Art Of Making </h2>
 			</div>
@@ -67,7 +52,8 @@
 		<div class="row">
 			<div class="col-md-9">
 				<p>The Art Of Making è un'etichetta che ho creato condividere con le altre persone i miei
-					progetti, tutti accoumunati dalla grande passione che ho per l'elettronica, la musica e l'informatica.</p>
+					progetti, tutti accoumunati dalla grande passione che ho per l'elettronica, la musica e
+					l'informatica.</p>
 				<p>
 					Questo nome non ha il solo scopo di condividere semplici progetti ma bensì la più grande
 					ambizione di
@@ -85,27 +71,38 @@
 					sfocia in una manualità artistica.
 				</p>
 			</div>
-			<div class="col-md-3" id="socialDiv">
-				<input type="image" src="assets/images/facebook-logo.png" class="socialButtons"
-					(click)="socialNavigation('facebook')" matTooltip="Facebook" />
-				<input type="image" src="assets/images/linkedin-logo.png" class="socialButtons"
-					(click)="socialNavigation('linkedin')" matTooltip="Linkedin" />
-				<input type="image" src="assets/images/github-logo.png" class="socialButtons"
-					(click)="socialNavigation('github')" matTooltip="Github" />
+			<div class="col-md-3 d-flex flex-column" id="socialDiv">
+				<div class="row d-flex flex-md-column justify-content-between" style="height: 70%; width: 100%;">
+					<div class="d-flex justify-content-center">
+						<input type="image" src="assets/images/facebook-logo.png" class="socialButtons"
+							(click)="socialNavigation('facebook')" matTooltip="Facebook" [matTooltipPosition]="'right'"/>
+					</div>
+					<div class="d-flex justify-content-center">
+						<input type="image" src="assets/images/linkedin-logo.png" class="socialButtons"
+							(click)="socialNavigation('linkedin')" matTooltip="Linkedin" [matTooltipPosition]="'right'"/>
+					</div>
+					<div class="d-flex justify-content-center">
+						<input type="image" src="assets/images/github-logo.png" class="socialButtons"
+							(click)="socialNavigation('github')" matTooltip="Github" [matTooltipPosition]="'right'"/>
+					</div>
+				</div>
+				<div class="italic d-none d-md-block">
+					adm91@email.com
+				</div>
 			</div>
 		</div>
 
-
-		<h2 class="paragraphTitle" #projects> Progetti </h2>
+		<div #projects></div>
+		<h2 class="paragraphTitle"> Progetti </h2>
 
 		<!--//////////// FLASHING BUDDHA ////////////-->
-		<div class="row">
+		<div class="row flex-md-row-reverse">
+			<div class="col-md-3 projectTitle">
+				<h3>Flashing Buddha </h3>
+			</div>
 			<div class="col-md-9 d-flex justify-content-center justify-content-md-between">
 				<img src="assets/images/flashing-buddha/mainBuddha.jpg" class="image">
 				<!-- foto principale progetto -->
-			</div>
-			<div class="col-md-3 projectTitle">
-				<h3>Flashing Buddha </h3>
 			</div>
 		</div>
 
@@ -145,20 +142,21 @@
 			la propria accensione e spegnimento.
 		</p>
 		<p>
-			Infine, l'uscita video del computer è impostata in modo da eseguire automaticamente un file batch in loop infinito,
+			Infine, l'uscita video del computer è impostata in modo da eseguire automaticamente un file batch in loop
+			infinito,
 			producendo il classico effetto "Matrix" con le scritte verdi su sfondo nero.
 		</p>
 
-		<hr/>
+		<hr />
 
 		<!--//////////// PARROT STADIUM //////////////-->
-		<div class="row projectHeader">
+		<div class="row projectHeader flex-md-row-reverse">
+			<div class="col-md-3 projectTitle">
+				<h3>Parrot stadium </h3>
+			</div>
 			<div class="col-md-9 d-flex justify-content-center justify-content-md-between">
 				<img src="assets/images/parrot-stadium/stadium1.jpg" class="image">
 				<!-- foto principale progetto -->
-			</div>
-			<div class="col-md-3 projectTitle">
-				<h3>Parrot stadium </h3>
 			</div>
 		</div>
 
@@ -222,13 +220,13 @@
 
 
 		<!--//////////// REPTOCLOCK //////////////-->
-		<div class="row projectHeader">
+		<div class="row projectHeader flex-md-row-reverse">
+			<div class="col-md-3 projectTitle">
+				<h3>Reptoclock</h3>
+			</div>
 			<div class="col-md-9 d-flex justify-content-center">
 				<img src="assets/images/reptoclock/mainApp.png">
 				<!-- foto principale progetto -->
-			</div>
-			<div class="col-md-3 projectTitle">
-				<h3>Reptoclock</h3>
 			</div>
 		</div>
 
@@ -285,13 +283,13 @@
 		<hr />
 
 		<!--//////////////// WEATHER STATION //////////////////-->
-		<div class="row projectHeader">
+		<div class="row projectHeader flex-md-row-reverse">
+			<div class="col-md-3 projectTitle">
+				<h3>Weather station</h3>
+			</div>
 			<div class="col-md-9 d-flex justify-content-center">
 				<img src="assets/images/weather-station/Ipad-app.png" class="image">
 				<!-- foto principale progetto -->
-			</div>
-			<div class="col-md-3 projectTitle">
-				<h3>Weather station</h3>
 			</div>
 		</div>
 
@@ -320,12 +318,12 @@
 		<hr />
 
 		<!--//////////////// RACING TIMER //////////////////-->
-		<div class="row projectHeader">
-			<div class="col-md-9 d-flex justify-content-center justify-content-md-between">
-				<img src="assets/images/racing-timer/chrono.jpg" class="image">
-			</div>
+		<div class="row projectHeader flex-md-row-reverse">
 			<div class="col-md-3 projectTitle">
 				<h3>Racing Timer</h3>
+			</div>
+			<div class="col-md-9 d-flex justify-content-center justify-content-md-between">
+				<img src="assets/images/racing-timer/chrono.jpg" class="image">
 			</div>
 		</div>
 
@@ -357,22 +355,25 @@
 			il codice sorgente è disponibile a questo indirizzo: <a
 				href="https://github.com/keysersoze24/racing-timer">https://github.com/keysersoze24/racing-timer</a>
 		</p>
-		<hr/>
+		<hr />
 
 
 
 		<div style="margin-top: 170px; margin-bottom: 50px;">
 			Grazie per essere arrivato fino a qui, spero che tu abbia apprezzato questo sito,
-			tengo a precisare che tutti i progetti non fanno parte della mia attuale carriera professionale, sono solo il
-			frutto del lavoro e passione nel mio tempo libero. Per qualunque domanda, dubbio, critica o richiesta non esitare a contattarmi!				
+			tengo a precisare che tutti i progetti non fanno parte della mia attuale carriera professionale, sono solo
+			il
+			frutto del lavoro e passione nel mio tempo libero. Per qualunque domanda, dubbio, critica o richiesta non
+			esitare a contattarmi!
 		</div>
-		<span class="italic"> "E ciò che è bene, Fedro, e ciò che non è bene - dobbiamo chiedere ad altri di dirci queste cose?"" </span>
+		<span class="italic"> "E ciò che è bene, Fedro, e ciò che non è bene - dobbiamo chiedere ad altri di dirci
+			queste cose?"" </span>
 
 	</div>
 	<footer class="page-footer bckGray white">
 		<div> Sito web sviluppato da Andrea Della Maggiora </div>
-		<div style="text-align: center;"> codice sorgente: <a href="https://github.com/keysersoze24/taom"> https://github.com/keysersoze24/taom </a>  </div>
+		<div style="text-align: center;"> codice sorgente: <a href="https://github.com/keysersoze24/taom">
+				https://github.com/keysersoze24/taom </a> </div>
 	</footer>
-
 
 </div>

@@ -6,17 +6,17 @@
     right: 0;
     z-index: 10;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-}
-#navBarContent{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5rem;
 }
 #buddhaLogo{
     max-width: 50px;
+}
+#buddhaLogo:hover {
+    opacity: 1.5;
+}
+#mailLogo{
+    max-width: 40px;
 }
 #mainTitle{
     text-align: center;

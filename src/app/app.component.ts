@@ -17,8 +17,12 @@ export class AppComponent {
 
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
-  scrollToElement(el: HTMLElement){
-    el.scrollIntoView({behavior: 'smooth', inline: 'start', block: 'start'});
+  scrollToTop() {
+    window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth'
+    });
   }
 
 
